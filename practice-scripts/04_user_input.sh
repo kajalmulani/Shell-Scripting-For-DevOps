@@ -4,4 +4,4 @@
 read -p "Aapka naam kya hai? " name
 read -p "Aap kahan se ho? " city
 
-echo "Namaste $name ji, $city se!"
+echo "Hello $name ji, $city se!"
