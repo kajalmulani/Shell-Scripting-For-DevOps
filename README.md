@@ -1,72 +1,73 @@
-# Shell Scripting in One Shot – Comprehensive Guide for DevOps
+# Shell Scripting for DevOps
 
-## 1. Introduction to Shell and Environment Setup
-- What is Shell? (Bash, Zsh, Ksh, etc.)
-- Shell vs. Terminal vs. Bash
-- Installing and Setting Up Bash (Linux/macOS/WSL for Windows)
-- Essential Configuration Files (`~/.bashrc`, `~/.bash_profile`, `~/.zshrc`)
-- Setting Up a DevOps-Friendly Shell Environment  
-  - PS1 Prompt Customization  
-  - Useful Aliases and Functions  
-  - Environment Variables (`$PATH`, `$HOME`, `$USER`)  
+Zero to hero. Bash basics → real DevOps automation.
 
-## 2. Basic Scripting Skills
-- Writing Your First Shell Script (`.sh` file, shebang `#!/bin/bash`)
-- Executing Scripts (`chmod +x script.sh`, `./script.sh`, `bash script.sh`)
-- Variables and Data Types (String, Integer, Arrays)
-- Reading User Input (`read` command)
-- Basic Operators (Arithmetic, Relational, Logical)
-- Control Flow:
-  - Conditional Statements (`if-else`, `case`)
-  - Looping (`for`, `while`, `until`)
-- Functions in Shell Scripts  
-- Exit Codes and Status (`$?`, `exit` command)
+**Udaan Batch 11 · TrainWithShubham**
 
-## 3. Intermediate Scripting Techniques
-- Working with Files and Directories (`ls`, `cp`, `mv`, `rm`, `mkdir`, `find`)
-- String Manipulation (`sed`, `awk`, `cut`, `tr`)
-- File Permissions and Ownership (`chmod`, `chown`, `umask`)
-- Input and Output Redirection (`>`, `>>`, `<`, `2>`, `&>`)
-- Process Management (`ps`, `top`, `kill`, `nohup`, `&`, `jobs`, `fg`, `bg`)
-- Cron Jobs and Task Automation (`crontab -e`, `at`, `systemd timers`)
-- Working with Logs (`tail -f`, `grep`, `awk` for parsing logs)
+---
 
-## 4. Advanced Scripting and Debugging
-- Writing Robust Scripts with Error Handling (`set -e`, `trap`, `||`, `&&`)
-- Debugging Techniques (`bash -x script.sh`, `set -x`, `set -v`)
-- Regular Expressions and Pattern Matching (`grep -E`, `sed -r`)
-- Advanced File Processing (`awk`, `sed`, `xargs`, `cut`, `paste`)
-- Networking with Shell Scripts (`ping`, `curl`, `wget`, `netstat`, `ss`)
-- Parallel Execution and Background Jobs (`&`, `wait`, `xargs -P`)
-- Working with APIs in Shell Scripts (cURL for REST API calls)
-- Secure Shell Scripting (`ssh`, `scp`, `sftp`, `expect`)
+## Start here
 
-## 5. Real-World Applications and Integration
-- Shell Scripting in DevOps Pipelines (CI/CD Integration)
-- Automating AWS/GCP/Azure Operations (`aws-cli`, `gcloud`, `az-cli`)
-- Automating Kubernetes Tasks (`kubectl`, `helm`, `jq`, `yq`)
-- Writing System Health Checks & Monitoring Scripts
-- Backup and Restore Automation
-- Log Parsing and Analysis with Shell Scripting
+```bash
+git clone <this-repo>
+cd Shell-Scripting-For-DevOps/practice-scripts
+bash 01_hello.sh
+```
 
-## 6. Shell Mastery and Continuous Learning
-- Writing Modular & Reusable Shell Scripts  
-- Best Practices for Readable and Maintainable Shell Scripts  
-- Shell Scripting Performance Optimization  
-- Learning Alternative Shells (Zsh, Fish, Dash)  
-- Moving Beyond Shell: When to Use Python, Ansible, or Terraform  
-- Keeping Up with DevOps Industry Trends  
+Then keep going — `02`, `03`, `04` … all the way to `19`.
 
-## 7. Projects to Keep Up with the Industry
-- **Automated Log Monitoring & Alert System**
-  - Parses logs, filters errors, and sends alerts via email or Slack.
-- **Infrastructure Backup Automation**
-  - Automates backup of critical files, databases, or VM snapshots.
-- **CI/CD Pipeline Helper**
-  - Automates repository cloning, testing, and deployment tasks.
-- **System Health Check Script**
-  - Checks CPU, Memory, Disk Usage, Running Services, and Network Status.
-- **Kubernetes Resource Monitor**
-  - Automates collection of Kubernetes cluster metrics for monitoring.
-- **AWS Instance Management Script**
-  - Starts/stops AWS EC2 instances on demand or based on schedule.
+Full guide: [`practice-scripts/README.md`](./practice-scripts/README.md)
+
+---
+
+## The path
+
+| Folder | What's inside |
+|--------|---------------|
+| **`practice-scripts/`** | 19 numbered scripts. Your zero-to-hero journey. **Start here.** |
+| `day01/` → `day03/` | Live class scripts, day-by-day. Reference + history. |
+| `log-files/` | Sample logs for `grep` / `awk` / `tail` practice. |
+
+---
+
+## How to practice
+
+1. **Read** the script (5 mins).
+2. **Run** it. See output.
+3. **Break** it on purpose — change a variable, remove a quote, swap `-eq` for `-ne`.
+4. **Rewrite** it from scratch without looking. This is where learning sticks.
+5. Move to the next number.
+
+Stuck? `bash -x script.sh` shows every line as it runs.
+
+---
+
+## The 6 things you'll actually learn
+
+- **Variables & input** — `read`, `$1`, `$(date)`
+- **Conditionals** — `if`, `[[ ]]`, file tests `-f`
+- **Loops** — `for`, `while`, C-style counters
+- **Functions** — reuse code, pass args
+- **Error handling** — `set -e`, exit codes, `&&` / `||`
+- **Real stuff** — user creation, system info, **backups + cron**, AWS EC2, Docker deploys
+
+---
+
+## Mini-projects in this repo
+
+- **Backup automation** → [`practice-scripts/19_backup.sh`](./practice-scripts/19_backup.sh) — tar/gzip + cron
+- **Django deploy** → [`day03/deploy_django_app.sh`](./day03/deploy_django_app.sh) — git + docker
+- **EC2 provisioning** → [`day03/create_ec2.sh`](./day03/create_ec2.sh) — AWS CLI + polling
+
+---
+
+## Need help?
+
+- `man bash` — the source of truth
+- `tldr <command>` — examples that actually make sense
+- [crontab.guru](https://crontab.guru) — cron expressions
+- [shellcheck.net](https://shellcheck.net) — paste your script, find bugs
+
+---
+
+Likhna shuru karo. Galtiyaan karo. Phir se likho. **Bas yahi tarika hai.**
