@@ -1,10 +1,14 @@
 #!/bin/bash
-# set -e: script first error pe ruk jata hai (no manual checks needed)
+# Strict mode — production-grade bash error handling:
+#   -e            : script exits the moment any command fails
+#   -u            : exits if you use an undefined variable (catches typos)
+#   -o pipefail   : a pipeline fails if ANY command in it fails (not just the last)
+set -euo pipefail
 
-set -e
+create_directory() {
+    mkdir "$1"
+    echo "$1 bana diya"
+}
 
-mkdir demo_folder
-echo "demo_folder bana diya"
-
-# yeh line tab hi chalegi jab upar wala mkdir successful ho
+create_directory demo_folder
 echo "Aage badhte hain - sab theek hai"
