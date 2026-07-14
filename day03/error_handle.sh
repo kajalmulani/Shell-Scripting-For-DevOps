@@ -5,9 +5,8 @@ create_directory() {
 }
 
 if ! create_directory; then
-	echo "The code is being exited as the directory already exists"
+	echo "the code is being exited as the directory already exists"
 	exit 1
 fi
 
-echo "this should not work beacuse the code is interrupted"
-
+echo "this should not work bcoz the code is intrupted"

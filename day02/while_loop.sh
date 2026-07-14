@@ -2,8 +2,8 @@
 
 num=0
 
-while [[ $num -le 10  ]]
+while [[ $num -le 10 ]]
 do
 	echo $num
-	num=$((num+2))
+        num=$((num+2))
 done
